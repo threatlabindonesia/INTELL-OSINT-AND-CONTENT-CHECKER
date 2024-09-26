@@ -71,7 +71,7 @@ git clone https://github.com/threatlabindonesia/INTELL-OSINT-AND-CONTENT-CHECKER
 
 2. Navigate to the directory:
 ```bash
-cd osint-main-domain-checker
+cd INTELL-OSINT-AND-CONTENT-CHECKER
 ```
 
 3. Install the necessary libraries:
