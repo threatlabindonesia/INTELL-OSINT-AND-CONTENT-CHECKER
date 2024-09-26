@@ -86,7 +86,7 @@ pip install -r requirements.txt
 ---
 
 ## 📝 License & Usage Terms
-These tools may only be downloaded and used by those who have been given explicit permission by the author. Any redistribution, copying, or unauthorized use will be considered a violation of copyright and applicable laws.
+These tools are free to download and use by anyone. However, any redistribution, or copying without permission is considered copyright infringement. If you would like to contribute or develop please email.
 
 ---
 
