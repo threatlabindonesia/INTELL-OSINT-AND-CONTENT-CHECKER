@@ -49,6 +49,7 @@ python domain_content_checker.py domains.txt "keyword" --output results.json --i
 
 ![Domain Content Checker](images/domain_content_checker.png)
 
+**NOTE** PLEASE REMOVE HTTPS:// AND HTTP:// PROTOCOL IF YOU WANT TO CHECK CONTENT FROM DOMAIN THAT YOU FOUND
 ---
 
 ## 🛠️ Requirements
