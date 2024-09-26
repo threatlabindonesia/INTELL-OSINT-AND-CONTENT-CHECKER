@@ -27,6 +27,8 @@ The `osint_main` tool enhances your OSINT capabilities by scraping data from mul
 python osint_main.py "keyword1,keyword2" --output results.csv
 ```
 
+![osint_main](images/osint_mian.png)
+
 ---
 
 ## 🌐 Domain Content Checker
@@ -44,6 +46,8 @@ The `domain_content_checker` tool is designed to analyze web domains or IP addre
 ```bash
 python domain_content_checker.py domains.txt "keyword" --output results.json --ignore-ssl
 ```
+
+![Domain Content Checker](images/domain_content_checker.png)
 
 ---
 
