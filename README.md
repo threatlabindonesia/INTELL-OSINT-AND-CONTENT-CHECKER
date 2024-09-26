@@ -1,4 +1,3 @@
-
 # OSINT Main & Domain Content Checker
 
 Welcome to my OSINT and Web Content Checker tool repository! 🚀
@@ -49,7 +48,7 @@ python domain_content_checker.py domains.txt "keyword" --output results.json --i
 
 ![Domain Content Checker](images/domain_content_checker.png)
 
-**NOTE** PLEASE REMOVE HTTPS:// AND HTTP:// PROTOCOL IF YOU WANT TO CHECK CONTENT FROM DOMAIN THAT YOU FOUND
+Note:Please remove the protocol from your URL, such as https:// or http:// before running the content check.
 ---
 
 ## 🛠️ Requirements
