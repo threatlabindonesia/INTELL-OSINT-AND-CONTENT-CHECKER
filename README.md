@@ -81,8 +81,8 @@ pip install -r requirements.txt
 
 ---
 
-## 📝 License
-This project is open-source and available under the MIT License.
+## 📝 License & Usage Terms
+These tools may only be downloaded and used by those who have been given explicit permission by the author. Any redistribution, copying, or unauthorized use will be considered a violation of copyright and applicable laws.
 
 ---
 
@@ -91,6 +91,7 @@ This project is open-source and available under the MIT License.
 **Afif Hidayatullah**  
 Organization: **ITSEC Asia**
 Division: **DFIR & THREAT Hunting**
+
 
 ---
 
