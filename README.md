@@ -94,12 +94,6 @@ Division: **DFIR and THREAT Hunting**
 
 ---
 
-## 🌟 Contributions
-
-Feel free to submit issues or pull requests to improve the tools or add more features.
-
----
-
 ## 📄 Contact
 
 For any inquiries, you can reach me at afif@itsecasia.com.
