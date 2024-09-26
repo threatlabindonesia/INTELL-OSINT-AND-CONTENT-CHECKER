@@ -90,8 +90,7 @@ These tools may only be downloaded and used by those who have been given explici
 
 **Afif Hidayatullah**  
 Organization: **ITSEC Asia**
-Division: **DFIR & THREAT Hunting**
-
+Division: **DFIR and THREAT Hunting**
 
 ---
 
