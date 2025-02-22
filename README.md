@@ -75,7 +75,7 @@ pip install -r requirements.txt
 
 ### **1️⃣ Run Scraping without Platform Filter**
 ```bash
-python3 osint_main.py "atmajaya.ac.id slot gacor" --engine google --pages 3 --output txt --filename results
+python3 osint_main.py "domain.com slot gacor" --engine google --pages 3 --output txt --filename results
 ```
 📌 **Results will be saved as:** `results.txt`
 
@@ -169,15 +169,13 @@ export PATH=$PATH:/usr/bin/google-chrome-stable
 ✔ **Requires a GUI to run Selenium Chrome Driver**  
 
 🚀 **Use responsibly! Do not engage in illegal activities!** 🚀
-```
 
----
 
 ## **📌 How to Use this README.md on GitHub**
 After creating your repository on GitHub, follow these steps:
 
 ### **1️⃣ Clone Repository Locally**
 ```bash
-git clone https://github.com/yourusername/osint-engine.git
-cd osint-engine
+git clone https://github.com/threatlabindonesia/INTELL-OSINT-AND-CONTENT-CHECKER.git
+cd INTELL-OSINT-AND-CONTENT-CHECKER
 ```
