@@ -1,103 +1,183 @@
-# OSINT Main & Domain Content Checker
+# 🌐 OSINT Engine - Advanced Web Scraper
 
-Welcome to my OSINT and Web Content Checker tool repository! 🚀
+OSINT Engine is an **Open-Source Intelligence (OSINT) Scraper** designed to automatically search data on search engines (**Google, Bing, DuckDuckGo**) using **Selenium WebDriver**.
 
-This repository contains two powerful tools designed for Open-Source Intelligence (OSINT) and web content validation. Whether you're investigating social media, websites, or specific domains, these tools will provide you with the insights and data you're looking for.
-
----
-
-## 🔍 OSINT Main
-The `osint_main` tool enhances your OSINT capabilities by scraping data from multiple sources, including social media platforms and search engines. It is ideal for researchers, security analysts, and anyone needing to gather large amounts of public data across the web.
-
-### Key Features:
-- Scrapes multiple platforms such as:
-  - Twitter
-  - Instagram
-  - Facebook
-  - GitHub
-  - Trello
-  - Google Drive
-- Performs bulk keyword searches.
-- Supports multiple search engines (Google, Bing, DuckDuckGo) to maximize data collection.
-- Provides customizable output formats (CSV, JSON).
-
-### Example Usage:
-```bash
-python osint_main.py "keyword1,keyword2" --output results.csv
-```
-
-![osint_main](images/osint_mian.png)
+⚠️ **IMPORTANT NOTICE:**  
+- **This script cannot be run in a CLI-only (headless) environment**  
+- **Requires a GUI (Graphical User Interface) to trigger Chrome WebDriver**  
+- **Must be run on a system with a desktop environment (Linux, Windows, macOS)**  
 
 ---
 
-## 🌐 Domain Content Checker
-
-The `domain_content_checker` tool is designed to analyze web domains or IP addresses, checking for the presence of specific keywords within their HTML content. It supports multiple protocols and includes detailed keyword search results across various HTML tags.
-
-### Key Features:
-- Reads domains or IPs from a `.txt` file and checks for specific keywords.
-- Supports both HTTP and HTTPS requests.
-- Can ignore SSL certificate errors using the `--ignore-ssl` option.
-- Provides detailed keyword search results, showing where the keyword was found (e.g., `<title>`, `<img>`, `<meta>`, `etc`).
-- Offers CSV and JSON output formats for easy reporting and data analysis.
-
-### Example Usage:
-```bash
-python domain_content_checker.py domains.txt "keyword" --output results.json --ignore-ssl
-```
-
-![Domain Content Checker](images/domain_content_checker.png)
-
-Note:Please remove the protocol from your URL, such as https:// or http:// before running the content check.
----
-
-## 🛠️ Requirements
-
-Both tools require Python 3.x and a few essential Python libraries and Install the chrome browser to ensure selenium runs properly. You can install them by running the following command:
-
-```bash
-pip install -r requirements.txt
-```
-
-### Required Libraries:
-- `argparse`
-- `requests`
-- `beautifulsoup4`
+## ✨ **Features**
+✔ Scrapes from **Google, Bing, and DuckDuckGo**  
+✔ Filters results for **specific platforms (Twitter, Facebook, GitHub, etc.)**  
+✔ **Cleans output** by removing unnecessary Google redirects  
+✔ Saves results in **TXT, CSV, or JSON** formats  
+✔ **Displays a progress bar** to show scraping status  
 
 ---
 
-## 📦 Installation
+## ⚙️ **Requirements**
+OSINT Engine requires the following dependencies:
 
-1. Clone this repository:
+### **1️⃣ Supported Operating Systems**
+✅ **Linux** (Ubuntu, Debian, Kali, Arch)  
+✅ **Windows** (WSL2 + GUI or Native)  
+✅ **macOS**  
+
+---
+
+### **2️⃣ Required Packages**
+- **Python 3.x**
+- **Google Chrome Stable**
+- **ChromeDriver (via WebDriver Manager)**
+- **Selenium & BeautifulSoup**
+
+---
+
+## 📌 **Installation Guide (Linux/macOS)**
+Run the following commands in the terminal:
+
 ```bash
-git clone https://github.com/threatlabindonesia/INTELL-OSINT-AND-CONTENT-CHECKER.git
+# 1️⃣ Update system & install dependencies
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y python3 python3-pip unzip wget curl
+
+# 2️⃣ Install Google Chrome Stable
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb || sudo apt-get install -f -y
+
+# 3️⃣ Install Python dependencies
+pip3 install -r requirements.txt
 ```
 
-2. Navigate to the directory:
+📌 **For Arch Linux users:**  
 ```bash
-cd INTELL-OSINT-AND-CONTENT-CHECKER
+sudo pacman -S google-chrome python-pip
+pip3 install -r requirements.txt
 ```
 
-3. Install the necessary libraries:
-```bash
+---
+
+## 📌 **Installation Guide (Windows)**
+1. **Install Python 3.x** from [Python Official Website](https://www.python.org/downloads/)  
+2. **Install Google Chrome** from [Google Chrome Download](https://www.google.com/chrome/)  
+3. **Install dependencies:**
+```powershell
 pip install -r requirements.txt
 ```
 
 ---
 
-## 📝 License & Usage Terms
-These tools are free to download and use by anyone. However, any redistribution, or copying without permission is considered copyright infringement. If you would like to contribute or develop please email.
+## 🔌 **How to Run OSINT Engine**
+⚠️ **Ensure you are running this on a GUI/Desktop environment, as Selenium requires a visible Chrome instance!**
+
+### **1️⃣ Run Scraping without Platform Filter**
+```bash
+python3 osint_main.py "atmajaya.ac.id slot gacor" --engine google --pages 3 --output txt --filename results
+```
+📌 **Results will be saved as:** `results.txt`
 
 ---
 
-## 👨‍💻 Created By
-
-**Afif Hidayatullah**  
-Organization: **ITSEC Asia**
-Division: **DFIR and THREAT Hunting**
+### **2️⃣ Scraping with Twitter Filter**
+```bash
+python3 osint_main.py "leaked credentials" --platform twitter --engine google --pages 3 --output txt --filename twitter_results
+```
+📌 **Only searches on Twitter (`site:twitter.com OR site:x.com`)**
 
 ---
 
-## 📄 Contact
+### **3️⃣ Scraping with Google Drive Filter**
+```bash
+python3 osint_main.py "confidential file" --platform gdrive --engine google --pages 3 --output csv --filename gdrive_files
+```
+📌 **Only searches on Google Drive (`site:drive.google.com`)**
 
-For any inquiries, you can reach me at afif@itsecasia.com.
+---
+
+### **4️⃣ Scraping on Bing & DuckDuckGo**
+```bash
+# Search on Bing
+python3 osint_main.py "site:pastebin.com leaks" --engine bing --pages 5 --output csv --filename bing_results
+
+# Search on DuckDuckGo
+python3 osint_main.py "hacked sites list" --engine duckduckgo --pages 3 --output json --filename duckduckgo_results
+```
+
+---
+
+## 📁 **Supported Output Formats**
+| Format | Command |
+|--------|---------|
+| `.txt` | `--output txt --filename results` |
+| `.csv` | `--output csv --filename results` |
+| `.json` | `--output json --filename results` |
+
+To view results:
+```bash
+cat results.txt   # For TXT
+cat results.csv   # For CSV
+cat results.json  # For JSON
+```
+
+---
+
+## ⚠️ **Troubleshooting**
+### **1️⃣ Error: `Session not created: Chrome failed to start`**
+✔ **Solution:**  
+- Ensure Google Chrome is installed and can be opened manually  
+- Try running:
+```bash
+google-chrome --version
+```
+- If the error persists, reinstall Chrome:
+```bash
+sudo apt purge google-chrome-stable
+sudo apt install -y google-chrome-stable
+```
+
+---
+
+### **2️⃣ Error: `Selenium WebDriver Error: Cannot find Chrome binary`**
+✔ **Solution:**  
+- Make sure Chrome is in the system `PATH`  
+- Check Chrome location:
+```bash
+which google-chrome
+```
+- If not found, add Chrome to `PATH`:
+```bash
+export PATH=$PATH:/usr/bin/google-chrome-stable
+```
+
+---
+
+## 📝 **Important Notes**
+- **This script requires a GUI (not CLI-only/server headless mode)**  
+- **If using a headless server/VPS, use VNC or RDP to run the script**  
+- **If you still want headless mode, modify Selenium options to `--headless` (not recommended)**  
+
+---
+
+## 🎯 **Conclusion**
+✔ **Automated OSINT Scraper for Google, Bing, DuckDuckGo**  
+✔ **Supports targeted searches (Twitter, Facebook, GitHub, etc.)**  
+✔ **Filters out unwanted Google redirects & irrelevant links**  
+✔ **Supports output in `.txt`, `.csv`, and `.json` formats**  
+✔ **Requires a GUI to run Selenium Chrome Driver**  
+
+🚀 **Use responsibly! Do not engage in illegal activities!** 🚀
+```
+
+---
+
+## **📌 How to Use this README.md on GitHub**
+After creating your repository on GitHub, follow these steps:
+
+### **1️⃣ Clone Repository Locally**
+```bash
+git clone https://github.com/yourusername/osint-engine.git
+cd osint-engine
+```
